@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+	
+	<!-- <style type="text/css">
+		p {
+			color: blue;
+		}
+	</style> -->
+
+
+	<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope){
+    	// $scope.name = "sumona";
+    	// $scope.address = "kolkaata";
+    	// $scope.phnnumber = "00000";
+    	// $scope.address = "Dhaka, Bangladesh";
+    	 // $scope.user={};
+    	$scope.click = function ()
+    	{
+    		//
+    		console.log($scope.user.name);
+    		console.log($scope.user.address);
+    		console.log($scope.user.phnnumber);
+    		console.log($scope.user.email);
+    		console.log($scope.user.date);
+    		console.log($scope.user.gender);
+    		
+
+    	}
+    });
+  </script>
+  </head>
+<body>
+<!-- 
+<div class="alert alert-danger" role="alert"> -->
+  
+
+<!-- <div ng-app="myApp" ng-init="name" ng-controller="myCtrl">
+
+<p>My name is <input type="text" ng-model="konika.Name"></p>
+<p>Name: {{ Name }}</p>
+
+<p>My home address is <input type="text" ng-model="konika.address" ></p>
+<p>Adress: {{ address }}</p>
+
+<form name="myForm">
+	<p>Write your Email Address</p>
+	Email:
+	<input type="email" name="myAddress" ng-model="konika.text" name="myAddress">
+	<span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+</form>
+<button ng-click="click()"> Click</button>
+</div>
+<br> -->
+
+
+<!-- </div> -->
+
+	<div class="container" ng-app="myApp" ng-controller="myCtrl">
+		<div class="alert alert-dark" role="alert">
+  
+
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label" for="name">
+       Name
+      </label>
+      <input class="form-control" id="name" name="name" ng-model="user.name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="name1">
+       Address
+      </label>
+      <input class="form-control" id="address" name="address" ng-model="user.address" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="number">
+       Phone Number
+      </label>
+      <input class="form-control" id="pnumber" name="pnumber" ng-model="user.phnnumber" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="email" name="email" ng-model="user.email" type="text"/>
+     </div>
+      <div class="form-group ">
+      <label class="control-label " for="date">
+       Date of Birth
+      </label>
+      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" ng-model="user.date" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select">
+       Gender
+      </label>
+      <select class="select form-control" id="select" ng-model="user.gender" name="select">
+       <option value="male">
+        Male
+       </option>
+       <option value="female">
+        Female
+       </option>
+       <option value="other">
+        other
+       </option>
+      </select>
+     </div>
+
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit" ng-click="click()">
+        Submit
+       </button>
+       
+       
+      </div>
+     </div>
+
+    </form>
+   
+
+
+</div>
+	<table class="table">
+	<thead class="alert alert-dark">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>DHaka</td>
+        <td>01770000</td>
+        <td>k@g.net</td>
+        <td>10/2/2000</td>
+        <td>Male</td>
+        <td><button type="button" class="btn btn-primary btn-rounded">Edit</button>
+        <button type="button" class="btn btn-danger btn-rounded">Delete</button></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>DHaka</td>
+        <td>01770000</td>
+        <td>k@g.net</td>
+        <td>10/2/2000</td>
+        <td>Male</td>
+                <td><button type="button" class="btn btn-primary btn-rounded">Edit</button>
+        <button type="button" class="btn btn-danger btn-rounded">Delete</button></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>DHaka</td>
+        <td>01770000</td>
+        <td>k@g.net</td>
+        <td>10/2/2000</td>
+        <td>Male</td>
+                <td><button type="button" class="btn btn-primary btn-rounded">Edit</button>
+        <button type="button" class="btn btn-danger btn-rounded">Delete</button></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>DHaka</td>
+        <td>01770000</td>
+        <td>k@g.net</td>
+        <td>10/2/2000</td>
+        <td>Male</td>
+                <td><button type="button" class="btn btn-primary btn-rounded">Edit</button>
+        <button type="button" class="btn btn-danger btn-rounded">Delete</button></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>DHaka</td>
+        <td>01770000</td>
+        <td>k@g.net</td>
+        <td>10/2/2000</td>
+        <td>Male</td>
+                <td><button type="button" class="btn btn-primary btn-rounded">Edit</button>
+        <button type="button" class="btn btn-danger btn-rounded">Delete</button></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>DHaka</td>
+        <td>01770000</td>
+        <td>k@g.net</td>
+        <td>10/2/2000</td>
+        <td>Male</td>
+                <td><button type="button" class="btn btn-primary btn-rounded">Edit</button>
+        <button type="button" class="btn btn-danger btn-rounded">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>
